@@ -15,7 +15,7 @@ export default function OriginPage() {
                 redirectTo="/origins"
                 initialData={{ origin: "" }}
             >
-                <SettingsForm keyName={"origin"} title={"Origem"}/>
+                <SettingsForm keyName={"origin"} title={"ORIGEM"} />
             </FormManager>
         </div>
     );

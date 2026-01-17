@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowRight } from "lucide-react";
 
 export default function PageCard({
-    buttonText = "Acessar página",
+    buttonText = "ACESSAR PAGINA",
     redirect = "/products",
     showButton = true,
     title,

@@ -16,7 +16,7 @@ import { TableLoading } from "@/components/common/TableLoading";
 
 export function OriginsTable({ rows, onDelete, loading }) {
     if (loading) {
-        return <TableLoading columns={[]} message="Carregando..." />;
+        return <TableLoading columns={[]} message="CARREGANDO..." />;
     }
 
     if (rows.length < 1) return <EmptyTable />
@@ -26,8 +26,8 @@ export function OriginsTable({ rows, onDelete, loading }) {
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead>Origem</TableHead>
-                        <TableHead className="w-[100px] text-right">Ações</TableHead>
+                        <TableHead>ORIGEM</TableHead>
+                        <TableHead className="w-[100px] text-right">AÇÕES</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -44,7 +44,7 @@ export function OriginsTable({ rows, onDelete, loading }) {
                                         e.stopPropagation()
                                         onDelete(origin)
                                     }}
-                                    aria-label="Remover origem"
+                                    aria-label="REMOVER ORIGEM"
                                     className="size-8 text-destructive hover:text-destructive cursor-pointer"
                                 >
                                     <Trash2 className="size-4" />

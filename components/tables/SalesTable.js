@@ -1,5 +1,9 @@
 "use client";
 
+import { TableLoading } from "@/components/common/TableLoading";
+import { useRouter } from 'next/navigation';
+import { Card } from "@/components/ui/card";
+import { EmptyTable } from "./Empty";
 import {
     Table,
     TableBody,
@@ -8,16 +12,12 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { Card } from "@/components/ui/card";
-import { EmptyTable } from "./Empty";
-import { TableLoading } from "@/components/common/TableLoading";
-import { useRouter } from 'next/navigation';
 
 export function SalesTable({ rows, loading }) {
     const router = useRouter();
 
     if (loading) {
-        return <TableLoading columns={[]} message="Carregando..." />;
+        return <TableLoading columns={[]} message="CARREGANDO..." />;
     }
 
     if (rows.length < 1) return <EmptyTable />
@@ -27,13 +27,13 @@ export function SalesTable({ rows, loading }) {
             <Table className="table-fixed">
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[14.28%]">Número da venda</TableHead>
+                        <TableHead className="w-[14.28%]">NÚMERO DA VENDA</TableHead>
                         <TableHead className="w-[14.28%]">SKU</TableHead>
-                        <TableHead className="w-[14.28%]">Nome do produto</TableHead>
-                        <TableHead className="w-[14.28%]">Nome do comprador</TableHead>
-                        <TableHead className="w-[14.28%]">Anúncio</TableHead>
-                        <TableHead className="w-[14.28%]">Data</TableHead>
-                        <TableHead className="w-[14.28%]">Tipo de envio</TableHead>
+                        <TableHead className="w-[14.28%]">NOME DO PRODUTO</TableHead>
+                        <TableHead className="w-[14.28%]">NOME DO COMPRADOR</TableHead>
+                        <TableHead className="w-[14.28%]">ANÚNCIO</TableHead>
+                        <TableHead className="w-[14.28%]">DATA</TableHead>
+                        <TableHead className="w-[14.28%]">TIPO DE ENVIO</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>

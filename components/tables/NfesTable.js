@@ -1,5 +1,10 @@
 "use client";
 
+import { TableLoading } from "@/components/common/TableLoading";
+import { FileTextIcon, FileCodeIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { EmptyTable } from "./Empty";
 import {
     Table,
     TableBody,
@@ -8,15 +13,10 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileTextIcon, FileCodeIcon } from "lucide-react";
-import { EmptyTable } from "./Empty";
-import { TableLoading } from "@/components/common/TableLoading";
 
 export function NfesTable({ rows = [], onRowClick, onDownloadPdf, onDownloadXml, loading }) {
     if (loading) {
-        return <TableLoading columns={[]} message="Carregando..." />;
+        return <TableLoading columns={[]} message="CARREGANDO..." />;
     }
 
     if (rows.length < 1) return <EmptyTable />
@@ -30,19 +30,19 @@ export function NfesTable({ rows = [], onRowClick, onDownloadPdf, onDownloadXml,
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[16.66%]">Número da Venda</TableHead>
-                        <TableHead className="w-[16.66%]">Número da Nota</TableHead>
-                        <TableHead className="w-[16.66%]">Valor Total</TableHead>
-                        <TableHead className="w-[16.66%]">Data</TableHead>
-                        <TableHead className="w-[16.66%]">Status</TableHead>
-                        <TableHead className="w-[16.66%] text-right">Ações</TableHead>
+                        <TableHead className="w-[16.66%]">NÚMERO DA VENDA</TableHead>
+                        <TableHead className="w-[16.66%]">NÚMERO DA NOTA</TableHead>
+                        <TableHead className="w-[16.66%]">VALOR TOTAL</TableHead>
+                        <TableHead className="w-[16.66%]">DATA</TableHead>
+                        <TableHead className="w-[16.66%]">STATUS</TableHead>
+                        <TableHead className="w-[16.66%] text-right">AÇÕES</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
                     {rows.length === 0 ? (
                         <TableRow>
                             <TableCell colSpan={6} className="text-center text-muted-foreground">
-                                Nenhuma venda encontrada
+                                NENHUMA VENDA ENCONTRADA
                             </TableCell>
                         </TableRow>
                     ) : (

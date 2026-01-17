@@ -35,7 +35,7 @@ export default function SaleView({
         <div className="w-full p-6 space-y-6">
             {/* Header */}
             <div className="flex items-center justify-between">
-                <h1 className="text-2xl font-semibold">Produto</h1>
+                <h1 className="text-2xl font-semibold">PRODUTO</h1>
                 <div className="flex gap-2">
                     <Button
                         variant="outline"
@@ -61,22 +61,22 @@ export default function SaleView({
             {/* Product Card */}
             <Card>
                 <CardHeader>
-                    <CardTitle>Produto</CardTitle>
+                    <CardTitle>PRODUTO</CardTitle>
                 </CardHeader>
                 <CardContent className="flex items-center gap-4">
                     <Avatar imagePath={product.imagePath} />
-                    
+
                     <div className="flex-1 grid grid-cols-3 gap-4">
                         <div>
-                            <p className="text-sm text-muted-foreground">Nome</p>
+                            <p className="text-sm text-muted-foreground">NOME</p>
                             <p className="text-sm font-medium">{product.name}</p>
                         </div>
                         <div>
-                            <p className="text-sm text-muted-foreground">Valor</p>
+                            <p className="text-sm text-muted-foreground">VALOR</p>
                             <p className="text-sm font-medium">{product.value}</p>
                         </div>
                         <div>
-                            <p className="text-sm text-muted-foreground">Quantidade</p>
+                            <p className="text-sm text-muted-foreground">QUANTIDADE</p>
                             <p className="text-sm font-medium">{product.quantity}</p>
                         </div>
                     </div>
@@ -88,31 +88,31 @@ export default function SaleView({
             {/* Sale Information */}
             <Card>
                 <CardHeader>
-                    <CardTitle>Informações da Venda</CardTitle>
+                    <CardTitle>INFORMAÇÕES DA VENDA</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                    <InfoRow label="Número da venda" value={sale_id} />
-                    <InfoRow label="Data" value={date} />
-                    <InfoRow label="Apelido comprador" value={buyer_name} />
-                    <InfoRow label="Dados de envio" value={state} />
-                    <InfoRow label="Dados de envio" value={status_description} />
-                    <InfoRow label="Número da nota fiscal" value={invoice_number} />
+                    <InfoRow label="NÚMERO DA VENDA" value={sale_id} />
+                    <InfoRow label="DATA" value={date} />
+                    <InfoRow label="APELIDO COMPRADOR" value={buyer_name} />
+                    <InfoRow label="DADOS DE ENVIO" value={state} />
+                    <InfoRow label="DADOS DE ENVIO" value={status_description} />
+                    <InfoRow label="NÚMERO DA NOTA FISCAL" value={invoice_number} />
                 </CardContent>
             </Card>
 
             {/* Financial Summary */}
             <Card>
                 <CardHeader>
-                    <CardTitle>Resumo Financeiro</CardTitle>
+                    <CardTitle>RESUMO FINANCEIRO</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                    <InfoRow label="Preço total dos produtos" value={product_revenue} />
-                    <InfoRow label="Receita por envio" value={shipping_revenue} />
-                    <InfoRow label="Custo envio" value={shipping_fees} />
-                    <InfoRow label="Impostos e tarifas" value={sales_fee_and_taxes} />
+                    <InfoRow label="PREÇO TOTAL DOS PRODUTOS" value={product_revenue} />
+                    <InfoRow label="RECEITA POR ENVIO" value={shipping_revenue} />
+                    <InfoRow label="CUSTO ENVIO" value={shipping_fees} />
+                    <InfoRow label="IMPOSTOS E TARIFAS" value={sales_fee_and_taxes} />
                     <Separator />
-                    <InfoRow label="Total" value={total_amount} bold />
-                    <InfoRow label="Lucro" value={profit} bold />
+                    <InfoRow label="TOTAL" value={total_amount} bold />
+                    <InfoRow label="LUCRO" value={profit} bold />
                 </CardContent>
             </Card>
         </div>

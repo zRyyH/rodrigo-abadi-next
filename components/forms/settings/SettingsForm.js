@@ -25,7 +25,7 @@ export default function SettingsForm({
     return (
         <Card>
             <CardHeader>
-                <CardTitle>{isEditMode ? `Editar ${title}` : `Criar ${title}`}</CardTitle>
+                <CardTitle>{isEditMode ? `EDITAR ${title}` : `CRIAR ${title}`}</CardTitle>
             </CardHeader>
             <CardContent>
                 <div className="space-y-6">
@@ -35,7 +35,7 @@ export default function SettingsForm({
                         </Label>
                         <Input
                             id={keyName}
-                            placeholder={`Digite a ${title}...`}
+                            placeholder={`DIGITE A ${title}...`}
                             value={formData[keyName] || ""}
                             onChange={(e) => handleChange(e.target.value)}
                             disabled={loading}

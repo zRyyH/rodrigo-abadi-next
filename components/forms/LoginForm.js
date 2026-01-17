@@ -1,12 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Spinner } from "@/components/ui/spinner";
 import { LockIcon, MailIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export default function LoginForm({
     formData = {},
@@ -24,15 +24,15 @@ export default function LoginForm({
     return (
         <Card className="w-full max-w-md">
             <CardHeader className="space-y-1">
-                <CardTitle className="text-2xl font-bold">Login</CardTitle>
+                <CardTitle className="text-2xl font-bold">LOGIN</CardTitle>
                 <CardDescription>
-                    Insira suas credenciais para acessar sua conta.
+                    INSIRA SUAS CREDENCIAIS PARA ACESSAR A CONTA
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <form onSubmit={onSubmit} className="space-y-4">
                     <div className="space-y-2">
-                        <Label htmlFor="email">Email</Label>
+                        <Label htmlFor="email">EMAIL</Label>
                         <div className="relative">
                             <MailIcon className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                             <Input
@@ -50,7 +50,7 @@ export default function LoginForm({
 
                     <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                            <Label htmlFor="password">Senha</Label>
+                            <Label htmlFor="password">SENHA</Label>
                             {onForgotPassword && (
                                 <Button
                                     type="button"
@@ -59,7 +59,7 @@ export default function LoginForm({
                                     onClick={onForgotPassword}
                                     disabled={true}
                                 >
-                                    Esqueceu a senha?
+                                    ESQUECEU A SENHA?
                                 </Button>
                             )}
                         </div>
@@ -68,7 +68,7 @@ export default function LoginForm({
                             <Input
                                 id="password"
                                 type="password"
-                                placeholder="Digite sua senha"
+                                placeholder="DIGITE SUA SENHA"
                                 className="pl-10"
                                 value={formData.password || ""}
                                 onChange={(e) => handleChange("password", e.target.value)}
@@ -82,7 +82,7 @@ export default function LoginForm({
                         {loading ? (
                             <>
                                 <Spinner className="mr-2" />
-                                Entrando...
+                                ENTRANDO...
                             </>
                         ) : (
                             "Entrar"
@@ -105,7 +105,7 @@ export default function LoginForm({
                                 onClick={onGoogleSignIn}
                                 disabled={true}
                             >
-                                Continuar com o Google
+                                CONTINUAR COM GOOGLE
                             </Button>
                         </>
                     )}
@@ -115,7 +115,7 @@ export default function LoginForm({
             {onSignUp && (
                 <CardFooter className="flex justify-center">
                     <p className="text-sm text-muted-foreground">
-                        Não tem uma conta?{" "}
+                        NÃO TEM UMA CONTA?{" "}
                         <Button
                             type="button"
                             variant="link"
@@ -123,7 +123,7 @@ export default function LoginForm({
                             onClick={onSignUp}
                             disabled={true}
                         >
-                            Cadastrar-se
+                            CADASTRAR-SE
                         </Button>
                     </p>
                 </CardFooter>

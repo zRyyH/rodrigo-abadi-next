@@ -19,7 +19,7 @@ export function useMutation(service, options = {}) {
             if (invalidateQueryKey) queryClient.invalidateQueries([invalidateQueryKey]);
         },
         onError: (e) => {
-            error(title, "Ops... ocorreu um erro :(");
+            error(title, "OPS... OCORREU UM ERRO :(");
         },
     });
 

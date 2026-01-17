@@ -9,9 +9,9 @@ export default function Products() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Produtos"
+                title="PRODUTOS"
                 redirect="/products/create"
-                buttonText="Criar Produto"
+                buttonText="CRIAR PRODUTO"
             />
             <TableSearch service={productsService} collection={"products"} >
                 <ProductsTable />

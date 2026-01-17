@@ -9,9 +9,9 @@ export default function Origins() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Origens"
+                title="ORIGENS"
                 redirect="/origins/create"
-                buttonText="Criar Origem"
+                buttonText="CRIAR ORIGEM"
             />
             <TableSearch service={originsService} collection={"origins"} >
                 <OriginsTable />

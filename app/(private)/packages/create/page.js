@@ -15,7 +15,7 @@ export default function PackagesPage() {
                 redirectTo="/packages"
                 initialData={{ type_of_packaging: "" }}
             >
-                <SettingsForm keyName={"type_of_packaging"} title={"Embalagem"} />
+                <SettingsForm keyName={"type_of_packaging"} title={"EMBALAGEM"} />
             </FormManager>
         </div>
     );

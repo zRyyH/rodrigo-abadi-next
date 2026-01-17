@@ -8,7 +8,7 @@ import { AlertCircleIcon } from "lucide-react";
 
 export default function SelectSmart({
     label,
-    placeholder = "Select an option...",
+    placeholder = "SELECIONE UMA OPÇÃO...",
     queryKey,
     service,
     value,
@@ -52,7 +52,7 @@ export default function SelectSmart({
                     {isLoading ? (
                         <div className="flex items-center gap-2">
                             <Spinner className="size-4" />
-                            <span className="text-muted-foreground">Carregando...</span>
+                            <span className="text-muted-foreground">CARREGANDO...</span>
                         </div>
                     ) : (
                         <SelectValue placeholder={placeholder} />
@@ -63,13 +63,13 @@ export default function SelectSmart({
                     {showError && (
                         <div className="flex items-center gap-2 p-2 text-sm text-destructive">
                             <AlertCircleIcon className="size-4" />
-                            <span>Falha ao carregar</span>
+                            <span>FALHA AO CARREGAR</span>
                         </div>
                     )}
 
                     {showEmpty && (
                         <div className="p-2 text-center text-sm text-muted-foreground">
-                            Sem opções
+                            SEM OPÇÕES
                         </div>
                     )}
 

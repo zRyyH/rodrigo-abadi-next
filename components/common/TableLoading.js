@@ -12,8 +12,8 @@ import {
 import { Card } from "@/components/ui/card";
 
 export function TableLoading({
-    columns = ["Origem", "Ações"],
-    message = "Carregando dados..."
+    columns = ["ORIGEM", "AÇÕES"],
+    message = "CARREGANDO DADOS..."
 }) {
     return (
         <Card className="w-full p-3 animate-fadeSlideIn">

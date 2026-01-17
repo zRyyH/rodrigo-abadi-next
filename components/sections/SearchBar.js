@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 
 export default function SearchbarWithFilters({
-    placeholder = "Buscar...",
+    placeholder = "BUSCAR...",
     filters = [],
     search,
     activeFilters,

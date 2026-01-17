@@ -26,7 +26,7 @@ export default function Header() {
         <header className="fixed top-0 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 animate-fadeSlideIn">
             <div className="relative flex h-16 items-center justify-between w-full px-4">
                 <div className="flex items-center gap-6">
-                    <div className="font-semibold text-lg">Rodrigo Abadi</div>
+                    <div className="font-semibold text-lg">RODRIGO ABADI</div>
                 </div>
 
                 <div className="absolute left-1/2 -translate-x-1/2">
@@ -35,7 +35,7 @@ export default function Header() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="h-9">
                                     <PackageIcon className="mr-2" />
-                                    Produtos
+                                    PRODUTOS
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="w-64 p-2">
@@ -43,7 +43,7 @@ export default function Header() {
                                             <div
                                                 onClick={() => router.push('/products/create')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Cadastrar produto
+                                                CADASTRAR PRODUTO
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
@@ -51,48 +51,48 @@ export default function Header() {
                                                 onClick={() => router.push('/products')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors"
                                             >
-                                                Estoque de produtos
+                                                ESTOQUE DE PRODUTO
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/invoices/create')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Cadastro fiscal
+                                                CADASTRO FISCAL
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/invoices')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Estoque fiscal
+                                                ESTOQUE FISCAL
                                             </div>
                                         </NavigationMenuLink>
 
                                         <Separator className="my-2" />
 
                                         <div className="px-3 py-1.5 text-xs font-medium text-muted-foreground">
-                                            Configurações
+                                            CONFIGURAÇÕES
                                         </div>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/suppliers')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Fornecedores
+                                                FORNECEDORES
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/packages')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Embalagens
+                                                EMBALAGENS
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/origins')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Origens
+                                                ORIGENS
                                             </div>
                                         </NavigationMenuLink>
                                     </div>
@@ -102,7 +102,7 @@ export default function Header() {
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger className="h-9">
                                     <ShoppingCartIcon className="mr-2" />
-                                    Vendas
+                                    VENDAS
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <div className="w-64 p-2">
@@ -110,21 +110,21 @@ export default function Header() {
                                             <div
                                                 onClick={() => router.push('/upload')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Inserir planilha de vendas
+                                                INSERIR PLANILHA DE VENDAS
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/sales')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Vendas
+                                                VENDAS
                                             </div>
                                         </NavigationMenuLink>
                                         <NavigationMenuLink className="block w-full">
                                             <div
                                                 onClick={() => router.push('/nfes')}
                                                 className="hover:bg-accent hover:text-accent-foreground rounded-md px-3 py-2 text-sm cursor-pointer transition-colors">
-                                                Arquivos notas fiscais
+                                                ARQUIVOS NOTAS FISCAL
                                             </div>
                                         </NavigationMenuLink>
                                     </div>
@@ -136,7 +136,7 @@ export default function Header() {
 
                 <Button variant="outline" size="sm" onClick={logout}>
                     <LogOutIcon />
-                    Sair
+                    SAIR
                 </Button>
             </div>
         </header>

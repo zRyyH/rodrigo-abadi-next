@@ -50,9 +50,9 @@ export default function ImageCarouselUpload({ images = [], onChange }) {
         <Card className="p-6">
             <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold">Imagens</h3>
+                    <h3 className="text-lg font-semibold">IMAGENS</h3>
                     <p className="text-sm text-muted-foreground">
-                        {images.length} {images.length === 1 ? "imagem" : "imagens"}
+                        {images.length} {images.length === 1 ? "IMAGEM" : "IMAGENS"}
                     </p>
                 </div>
 
@@ -78,7 +78,7 @@ export default function ImageCarouselUpload({ images = [], onChange }) {
                                                     ) : (
                                                         <div className="flex flex-col items-center gap-2 text-muted-foreground">
                                                             <ImageOff className="h-12 w-12" />
-                                                            <span className="text-sm">Imagem indisponível</span>
+                                                            <span className="text-sm">IMAGEM INDISPONIVEL</span>
                                                         </div>
                                                     )}
                                                     <Button
@@ -120,7 +120,7 @@ export default function ImageCarouselUpload({ images = [], onChange }) {
                         disabled={uploading}
                     >
                         <Upload className="mr-2 h-4 w-4" />
-                        {uploading ? "Enviando..." : "Adicionar Imagens"}
+                        {uploading ? "ENVIANDO..." : "ADICIONAR IMAGENS"}
                     </Button>
                 </div>
             </div>

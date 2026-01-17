@@ -9,9 +9,9 @@ export default function Sales() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Vendas"
+                title="VENDAS"
                 redirect="/upload"
-                buttonText="Criar Venda"
+                buttonText="CRIAR VENDA"
             />
 
             <TableSearch service={salesService} collection={"sales"} >

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function LoadingScreen({
     className,
-    message = "Loading...",
+    message = "CARREGANDO...",
     showMessage = true,
     variant = "default",
     ...props

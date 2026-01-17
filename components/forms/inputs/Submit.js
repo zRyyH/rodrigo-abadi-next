@@ -9,14 +9,14 @@ export default function FormActions({
     loading = false,
     isEditMode = false,
     submitLabel,
-    cancelLabel = "Cancelar",
+    cancelLabel = "CANCELAR",
     className,
 }) {
     const defaultSubmitLabel = loading
-        ? "Salvando..."
+        ? "SALVANDO..."
         : isEditMode
-            ? "Salvar"
-            : "Criar";
+            ? "SALVAR"
+            : "CRIAR";
 
     return (
         <div className={cn("flex gap-2", className)}>

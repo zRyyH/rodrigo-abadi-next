@@ -15,7 +15,7 @@ export default function PackagesPage() {
                 redirectTo="/suppliers"
                 initialData={{ supplier_name: "" }}
             >
-                <SettingsForm keyName={"supplier_name"} title={"Fornecedor"} />
+                <SettingsForm keyName={"supplier_name"} title={"FORNECEDOR"} />
             </FormManager>
         </div>
     );

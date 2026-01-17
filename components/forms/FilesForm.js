@@ -10,29 +10,29 @@ import { cn } from "@/lib/utils";
 const fileInputs = [
     {
         id: "sales",
-        label: "Vendas XLSX",
-        description: "Arquivo de vendas em formato Excel",
+        label: "VENDAS XLSX",
+        description: "ARQUIVO DE VENDAS EM FORMATO EXCEL",
         accept: ".xlsx",
         icon: FileSpreadsheetIcon,
     },
     {
         id: "nfes",
-        label: "NFEs XLSX",
-        description: "Notas fiscais eletrônicas em Excel",
+        label: "NFES XLSX",
+        description: "NOTAS FISCAIS ELETRONICAS EM FORMATO EXCEL",
         accept: ".xlsx",
         icon: FileSpreadsheetIcon,
     },
     {
         id: "xml",
         label: "XML ZIP",
-        description: "Arquivos XML compactados",
+        description: "ARQUIVOS XML COMPACTADOS",
         accept: ".zip",
         icon: FileArchiveIcon,
     },
     {
         id: "pdf",
         label: "PDF ZIP",
-        description: "Arquivos PDF compactados",
+        description: "ARQUIVOS PDF COMPACTADOS",
         accept: ".zip",
         icon: FileArchiveIcon,
     },
@@ -51,9 +51,9 @@ export default function FilesForm({
     return (
         <Card className="shadow-lg">
             <CardHeader className="space-y-1">
-                <CardTitle className="text-2xl">Upload de Arquivos</CardTitle>
+                <CardTitle className="text-2xl">UPLOAD DE ARQUIVOS</CardTitle>
                 <CardDescription>
-                    Selecione os arquivos necessários para processamento
+                    SELECIONE OS ARQUIVOS NECESSARIOS PARA O PROCESSAMENTO
                 </CardDescription>
             </CardHeader>
             <CardContent>
@@ -130,12 +130,12 @@ export default function FilesForm({
                         {loading ? (
                             <>
                                 <Spinner className="size-5" />
-                                Processando...
+                                PROCESSANDO...
                             </>
                         ) : (
                             <>
                                 <UploadIcon className="size-5" />
-                                Fazer Upload
+                                FAZER UPLOAD
                             </>
                         )}
                     </Button>

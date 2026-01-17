@@ -1,5 +1,12 @@
 "use client";
 
+import { TableLoading } from "@/components/common/TableLoading";
+import { PencilIcon, Trash2Icon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Avatar from "@/components/common/Avatar";
+import { Card } from "@/components/ui/card";
+import { useRouter } from "next/navigation";
+import { EmptyTable } from "./Empty";
 import {
     Table,
     TableBody,
@@ -8,13 +15,6 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
-import { PencilIcon, Trash2Icon } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { EmptyTable } from "./Empty";
-import { TableLoading } from "@/components/common/TableLoading";
-import { useRouter } from "next/navigation";
-import Avatar from "@/components/common/Avatar";
 
 export function ProductsTable({
     rows,
@@ -24,7 +24,7 @@ export function ProductsTable({
     const router = useRouter();
 
     if (loading) {
-        return <TableLoading columns={[]} message="Carregando..." />;
+        return <TableLoading columns={[]} message="CARREGANDO..." />;
     }
 
     if (rows.length < 1) return <EmptyTable />
@@ -34,16 +34,16 @@ export function ProductsTable({
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[60px]">Foto</TableHead>
+                        <TableHead className="w-[60px]">FOTO</TableHead>
                         <TableHead>SKU</TableHead>
-                        <TableHead>Nome</TableHead>
-                        <TableHead className="text-center">Quantidade</TableHead>
-                        <TableHead>Embalagem</TableHead>
-                        <TableHead>Fornecedor</TableHead>
-                        <TableHead>Custo</TableHead>
+                        <TableHead>NOME</TableHead>
+                        <TableHead className="text-center">QUANTIDADE</TableHead>
+                        <TableHead>EMBALAGEM</TableHead>
+                        <TableHead>FORNECEDOR</TableHead>
+                        <TableHead>CUSTO</TableHead>
                         <TableHead>NCM</TableHead>
                         <TableHead>CEST</TableHead>
-                        <TableHead className="text-right w-[120px]">Ações</TableHead>
+                        <TableHead className="text-right w-[120px]">AÇÕES</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>

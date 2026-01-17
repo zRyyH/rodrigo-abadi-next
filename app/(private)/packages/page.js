@@ -9,9 +9,9 @@ export default function Packages() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Embalagens"
+                title="EMBALAGENS"
                 redirect="/packages/create"
-                buttonText="Criar Emabalagem"
+                buttonText="CRIAR EMBALAGEM"
             />
             <TableSearch service={packagesService} collection={"packages"} >
                 <PackagesTable />

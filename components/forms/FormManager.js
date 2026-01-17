@@ -14,10 +14,10 @@ export default function FormManager({
     initialData = {},
     onSuccess,
     messages = {
-        createSuccess: "Item criado com sucesso",
-        updateSuccess: "Item atualizado com sucesso",
-        createError: "Erro ao criar item",
-        updateError: "Erro ao atualizar item",
+        createSuccess: "ITEM CRIADO COM SUCESSO",
+        updateSuccess: "ITEM ATUALIZADO COM SUCESSO",
+        createError: "ERRO AO CRIAR ITEM",
+        updateError: "ERRO AO ATUALIZAR ITEM",
     },
 }) {
     const params = useParams();
@@ -28,21 +28,18 @@ export default function FormManager({
     const [formData, setFormData] = useState(initialData);
     const isEditMode = Boolean(params.id);
 
-    // Fetch data para modo de edição
     const { data: fetchedData, isLoading: isLoadingData } = useQuery({
         queryKey: [queryKey, params.id],
         queryFn: () => queryFn(params.id),
         enabled: isEditMode && !!queryFn,
     });
 
-    // Atualiza formData quando buscar dados
     useEffect(() => {
         if (fetchedData) {
             setFormData(fetchedData);
         }
     }, [fetchedData]);
 
-    // Handlers de sucesso e erro
     const handleMutationSuccess = (data, successMessage) => {
         queryClient.invalidateQueries({ queryKey: [queryKey] });
         success("Sucesso", successMessage);
@@ -58,21 +55,18 @@ export default function FormManager({
         error("Erro", message);
     };
 
-    // Mutation para criar
     const createMutation = useMutation({
         mutationFn: (data) => createFn(data),
         onSuccess: (data) => handleMutationSuccess(data, messages.createSuccess),
         onError: (err) => handleMutationError(err, messages.createError),
     });
 
-    // Mutation para atualizar
     const updateMutation = useMutation({
         mutationFn: (data) => updateFn(params.id, data),
         onSuccess: (data) => handleMutationSuccess(data, messages.updateSuccess),
         onError: (err) => handleMutationError(err, messages.updateError),
     });
 
-    // Handlers do formulário
     const handleSubmit = (e) => {
         e?.preventDefault();
         const mutation = isEditMode ? updateMutation : createMutation;
@@ -85,7 +79,6 @@ export default function FormManager({
         }
     };
 
-    // Props injetadas no children
     const childProps = {
         formData,
         setFormData,

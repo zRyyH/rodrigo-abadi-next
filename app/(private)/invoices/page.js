@@ -9,9 +9,9 @@ export default function Invoices() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Notas Fiscais"
+                title="NOTAS FISCAIS"
                 redirect="/invoices/create"
-                buttonText="Criar Nota Fiscal"
+                buttonText="CRIAR NOTA FISCAL"
             />
             <TableSearch collection={"invoices"} service={invoicesService} >
                 <InvoicesTable />

@@ -12,9 +12,9 @@ export function EmptyTable() {
                     <EmptyMedia variant="icon">
                         <PackageOpen />
                     </EmptyMedia>
-                    <EmptyTitle>Nenhum item adicionado</EmptyTitle>
+                    <EmptyTitle>NENHUM ITEM ADICIONADO</EmptyTitle>
                     <EmptyDescription>
-                        Adicione items para começar
+                        ADICIONE ITENS PARA COMEÇAR
                     </EmptyDescription>
                 </EmptyHeader>
             </Empty>

@@ -1,5 +1,9 @@
 "use client";
 
+import { TableLoading } from "@/components/common/TableLoading";
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card";
+import { EmptyTable } from "./Empty";
 import { Trash2 } from "lucide-react"
 import {
     Table,
@@ -9,14 +13,10 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card";
-import { EmptyTable } from "./Empty";
-import { TableLoading } from "@/components/common/TableLoading";
 
 export function SuppliersTable({ rows, onDelete, loading }) {
     if (loading) {
-        return <TableLoading columns={[]} message="Carregando..." />;
+        return <TableLoading columns={[]} message="CARREGANDO..." />;
     }
 
     if (rows.length < 1) return <EmptyTable />
@@ -26,8 +26,8 @@ export function SuppliersTable({ rows, onDelete, loading }) {
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead>Fornecedor</TableHead>
-                        <TableHead className="w-[100px] text-right">Ações</TableHead>
+                        <TableHead>FORNECEDOR</TableHead>
+                        <TableHead className="w-[100px] text-right">AÇÕES</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -44,7 +44,7 @@ export function SuppliersTable({ rows, onDelete, loading }) {
                                         e.stopPropagation()
                                         onDelete(supplier)
                                     }}
-                                    aria-label="Remover fornecedor"
+                                    aria-label="REMOVER FORNECEDOR"
                                     className="size-8 text-destructive hover:text-destructive cursor-pointer"
                                 >
                                     <Trash2 className="size-4" />

@@ -1,12 +1,12 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { suppliersService } from "@/services/suppliers";
-import { packagesService } from "@/services/packages";
 import ImageCarouselUpload from "@/components/forms/inputs/ImageCarouselUpload";
 import SelectSmart from "@/components/forms/inputs/Select";
 import FormActions from "@/components/forms/inputs/Submit";
 import LabeledInput from "@/components/forms/inputs/Input";
+import { suppliersService } from "@/services/suppliers";
+import { packagesService } from "@/services/packages";
 
 export default function ProductForm({
     formData = {},
@@ -21,11 +21,11 @@ export default function ProductForm({
     const handleChange = (field, value) => {
         setFormData({ ...formData, [field]: value });
     };
-    
+
     return (
         <Card>
             <CardHeader>
-                <CardTitle>{isEditMode ? "Editar Produto" : "Criar Produto"}</CardTitle>
+                <CardTitle>{isEditMode ? "Editar Produto" : "CRIAR PRODUTO"}</CardTitle>
             </CardHeader>
             <CardContent>
                 <div className="space-y-6">
@@ -33,8 +33,8 @@ export default function ProductForm({
                         <div className="space-y-4">
                             <LabeledInput
                                 id="name"
-                                label="Nome"
-                                placeholder="Digite o nome do produto..."
+                                label="NOME"
+                                placeholder="DIGITE O NOME DO PRODUTO..."
                                 value={formData.name || ""}
                                 onChange={(value) => handleChange("name", value)}
                                 required
@@ -43,7 +43,7 @@ export default function ProductForm({
                             <LabeledInput
                                 id="sku"
                                 label="SKU"
-                                placeholder="Digite o SKU..."
+                                placeholder="DIGITE O SKU..."
                                 value={formData.sku || ""}
                                 onChange={(value) => handleChange("sku", value)}
                                 required
@@ -51,8 +51,8 @@ export default function ProductForm({
 
                             <LabeledInput
                                 id="quantity"
-                                label="Quantidade"
-                                placeholder="Digite a quantidade..."
+                                label="QUANTIDADE"
+                                placeholder="DIGITE A QUANTIDADE..."
                                 value={formData.quantity || ""}
                                 onChange={(value) => handleChange("quantity", value)}
                                 required
@@ -60,16 +60,16 @@ export default function ProductForm({
 
                             <LabeledInput
                                 id="purchase_cost"
-                                label="Custo"
-                                placeholder="Digite o custo do produto..."
+                                label="CUSTO"
+                                placeholder="DIGITE O CUSTO DO PRODUTO..."
                                 value={formData.purchase_cost || ""}
                                 onChange={(value) => handleChange("purchase_cost", value)}
                                 required
                             />
 
                             <SelectSmart
-                                label="Embalagem"
-                                placeholder="Selecionar embalagem..."
+                                label="EMBALAGEM"
+                                placeholder="SELECIONAR EMBALAGEM..."
                                 queryKey="packages"
                                 service={packagesService.getAll}
                                 value={formData?.package_id}
@@ -81,8 +81,8 @@ export default function ProductForm({
                             />
 
                             <SelectSmart
-                                label="Fornecedor"
-                                placeholder="Selecionar fornecedor..."
+                                label="FORNECEDOR"
+                                placeholder="SELECIONAR FORNECEDOR..."
                                 queryKey="suppliers"
                                 service={suppliersService.getAll}
                                 value={formData?.supplier_id}
@@ -96,7 +96,7 @@ export default function ProductForm({
                             <LabeledInput
                                 id="cest"
                                 label="CEST"
-                                placeholder="Digite o CEST..."
+                                placeholder="DIGITE O CEST..."
                                 value={formData.cest || ""}
                                 onChange={(value) => handleChange("cest", value)}
                                 required
@@ -105,7 +105,7 @@ export default function ProductForm({
                             <LabeledInput
                                 id="ncm"
                                 label="NCM"
-                                placeholder="Digite o NCM..."
+                                placeholder="DIGITE O NCM..."
                                 value={formData.ncm || ""}
                                 onChange={(value) => handleChange("ncm", value)}
                                 required

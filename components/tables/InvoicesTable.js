@@ -29,12 +29,12 @@ export function InvoicesTable({ rows, onDelete, loading }) {
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead>Produto</TableHead>
-                        <TableHead>Quantidade</TableHead>
+                        <TableHead>PRODUTO</TableHead>
+                        <TableHead>QUANTIDADE</TableHead>
                         <TableHead>NCM</TableHead>
                         <TableHead>CEST</TableHead>
-                        <TableHead>Origem</TableHead>
-                        <TableHead className="text-right">Ações</TableHead>
+                        <TableHead>ORIGEM</TableHead>
+                        <TableHead className="text-right">AÇÕES</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>

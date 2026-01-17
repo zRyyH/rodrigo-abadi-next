@@ -1,12 +1,11 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { originsService } from "@/services/origins";
-import { FieldGroup } from "@/components/ui/field";
-
 import SelectSmart from "@/components/forms/inputs/Select";
 import FormActions from "@/components/forms/inputs/Submit";
 import LabeledInput from "@/components/forms/inputs/Input";
+import { originsService } from "@/services/origins";
+import { FieldGroup } from "@/components/ui/field";
 
 export default function InvoicesForm({
     formData = {},
@@ -25,15 +24,15 @@ export default function InvoicesForm({
     return (
         <Card>
             <CardHeader>
-                <CardTitle>Criar Notas</CardTitle>
+                <CardTitle>CRIAR NOTAS</CardTitle>
             </CardHeader>
             <CardContent>
                 <form onSubmit={onSubmit} className="space-y-6">
                     <FieldGroup>
                         <LabeledInput
                             id="product_name"
-                            label="Nome do produto"
-                            placeholder="Digite o nome do produto..."
+                            label="NOME DO PRODUTO"
+                            placeholder="DIGITE O NOME DO PRODUTO..."
                             value={formData.product_name || ""}
                             onChange={(value) => handleChange("product_name", value)}
                             required
@@ -41,16 +40,16 @@ export default function InvoicesForm({
 
                         <LabeledInput
                             id="quantity"
-                            label="Quantidade"
-                            placeholder="Digite a quantidade..."
+                            label="QUANTIDADE"
+                            placeholder="DIGITE A QUANTIDADE..."
                             value={formData.quantity || ""}
                             onChange={(value) => handleChange("quantity", value)}
                             required
                         />
 
                         <SelectSmart
-                            label="Origem"
-                            placeholder="Selecionar origem..."
+                            label="ORIGEM"
+                            placeholder="SELECIONAR ORIGEM..."
                             queryKey="origins"
                             service={originsService.getAll}
                             value={formData.origin_id}
@@ -64,7 +63,7 @@ export default function InvoicesForm({
                         <LabeledInput
                             id="ncm"
                             label="NCM"
-                            placeholder="Digite o NCM..."
+                            placeholder="DIGITE O NCM..."
                             value={formData.ncm || ""}
                             onChange={(value) => handleChange("ncm", value)}
                             required
@@ -73,7 +72,7 @@ export default function InvoicesForm({
                         <LabeledInput
                             id="cest"
                             label="CEST"
-                            placeholder="Digite o CEST..."
+                            placeholder="DIGITE O CEST..."
                             value={formData.cest || ""}
                             onChange={(value) => handleChange("cest", value)}
                             required

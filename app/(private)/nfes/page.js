@@ -13,9 +13,9 @@ export default function Sales() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Notas Fiscais"
+                title="NOTAS FISCAIS"
                 redirect="/upload"
-                buttonText="Criar Nota Fiscal"
+                buttonText="CRIAR NOTA FISCAL"
             />
 
             <TableSearch service={nfesService} collection={"nfes"} >

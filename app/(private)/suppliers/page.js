@@ -9,9 +9,9 @@ export default function Suppliers() {
     return (
         <div className="gap-4 flex flex-col animate-fadeSlideIn">
             <PageCard
-                title="Fornecedores"
+                title="FORNECEDOR"
                 redirect="/suppliers/create"
-                buttonText="Criar Fornecedor"
+                buttonText="CRIAR FORNECEDOR"
             />
             <TableSearch service={suppliersService} collection={"suppliers"} >
                 <SuppliersTable />

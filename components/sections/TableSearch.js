@@ -12,8 +12,8 @@ export function TableSearch({ children, collection, service }) {
     const searchProps = useSearchWithFilters([collection]);
 
     const { mutate: onDelete } = useMutation(service.delete, {
-        title: "Delete",
-        msg: "Item deletado com sucesso",
+        title: "DELETE",
+        msg: "ITEM DELETADO COM SUCESSO",
         redirect: `/${collection}`,
         invalidateQueryKey: collection,
     });
